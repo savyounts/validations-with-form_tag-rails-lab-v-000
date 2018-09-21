@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:edit, :update, :show]
 
-  def new 
-    @post = Post.new 
+  def new
+    @post = Post.new
   end
 
-  def create 
+  def create
     @post = Post.new(post_params)
     if @post.valid?
       @post.save
@@ -15,7 +15,7 @@ class PostsController < ApplicationController
     end
 
   end
-  
+
   def show
   end
 
@@ -25,7 +25,7 @@ class PostsController < ApplicationController
   def update
     if @post.update(post_params)
       redirect_to post_path(@post)
-    else 
+    else
       render :edit
     end
   end
