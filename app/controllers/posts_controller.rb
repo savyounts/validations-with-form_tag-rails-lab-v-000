@@ -1,6 +1,10 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:edit, :update, :show]
 
+  def new 
+    @post = Post.new 
+  end
+  
   def show
   end
 
