@@ -19,20 +19,20 @@ class AuthorsController < ApplicationController
     end
   end
 
-  def edit 
-  end 
+  def edit
+  end
 
   def update
-    author = Author.new 
+    author = Author.new
     if author.valid?
       @author.update(author_params)
       redirect_to author_path(@author)
-    else 
-      render :edit 
+    else
+      render :edit
     end
   end
 
-  def show 
+  def show
   end
 
   private
